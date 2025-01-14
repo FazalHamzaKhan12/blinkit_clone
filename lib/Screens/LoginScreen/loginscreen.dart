@@ -15,23 +15,25 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             UiHelper.CustomImage(
               img: "Blinkit Onboarding Screen.png",
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             UiHelper.CustomImage(img: "image 10.png"),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             UiHelper.CustomText(
-                text: "India’s last minute app",
-                color: Colors.black87,
-                fontWeight: FontWeight.bold,
-                fontsize: 24),
-            SizedBox(
+              text: "India’s last minute app",
+              color: Colors.black87,
+              fontWeight: FontWeight.bold,
+              fontSize: 24, // Corrected parameter name
+            ),
+            const SizedBox(
               height: 10,
             ),
             Card(
@@ -43,47 +45,60 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 200,
                 width: 350,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.white70),
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.white70,
+                ),
                 child: Column(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
                     UiHelper.CustomText(
-                        text: "Hamza",
-                        color: Colors.black,
-                        fontWeight: FontWeight.w500,
-                        fontsize: 15),
-                    SizedBox(
+                      text: "Hamza",
+                      color: Colors.black,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 15, // Corrected parameter name
+                    ),
+                    const SizedBox(
                       height: 6,
                     ),
                     UiHelper.CustomText(
-                        text: "79027XXXX",
-                        color: Color(0XFF9C9C9C),
-                        fontWeight: FontWeight.bold,
-                        fontsize: 14),
-                    SizedBox(
+                      text: "79027XXXX",
+                      color: const Color(0XFF9C9C9C),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14, // Corrected parameter name
+                    ),
+                    const SizedBox(
                       height: 10,
                     ),
                     SizedBox(
                       height: 48,
                       width: 295,
                       child: ElevatedButton(
-                        onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>BottomNavScreen()));},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => BottomNavScreen(),
+                            ),
+                          );
+                        },
                         style: ElevatedButton.styleFrom(
-                            backgroundColor: Color(0XFFE23744),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10))),
+                          backgroundColor: const Color(0XFFE23744),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             UiHelper.CustomText(
-                                text: "Login  with",
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontsize: 16),
-                            SizedBox(
+                              text: "Login  with",
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16, // Corrected parameter name
+                            ),
+                            const SizedBox(
                               width: 5,
                             ),
                             UiHelper.CustomImage(img: "image 9.png"),
@@ -91,27 +106,28 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     UiHelper.CustomText(
-                        text:
-                            "Access your saved addresses from Zomato automatically!",
-                        color: Color(0XFF9C9C9C),
-                        fontWeight: FontWeight.w500,
-                        fontsize: 10),
-                    SizedBox(
+                      text: "Access your saved addresses from Zomato automatically!",
+                      color: const Color(0XFF9C9C9C),
+                      fontWeight: FontWeight.w500,
+                      fontSize: 10, // Corrected parameter name
+                    ),
+                    const SizedBox(
                       height: 20,
                     ),
                     UiHelper.CustomText(
-                        text: "or login with phone number",
-                        color: Color(0XFF269237),
-                        fontWeight: FontWeight.normal,
-                        fontsize: 14),
+                      text: "or login with phone number",
+                      color: const Color(0XFF269237),
+                      fontWeight: FontWeight.normal,
+                      fontSize: 14, // Corrected parameter name
+                    ),
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
